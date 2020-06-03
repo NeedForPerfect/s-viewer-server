@@ -11,8 +11,10 @@ export class AppController {
   }
 
   @Get('hello')
-  getHello(): string {
-    return this.appService.getHello();
+  getHello(): any {
+    // return this.appService.getHello();
+    console.log(this.appService.getSuplies());
+    return (this.appService.getSuplies() as any);
   }
 
 }

@@ -5,7 +5,7 @@ require("dotenv/config");
 
 const DB_PASSWORD = process.env.DB_PASSWORD
 
-const client = new Client({
+export const client = new Client({
   user: 'lraqlqpculjgps',
   host: 'ec2-176-34-97-213.eu-west-1.compute.amazonaws.com',
   database: 'd2ia90tbiq7o1h',
@@ -16,17 +16,11 @@ const client = new Client({
   }
 })
 client.connect();
-console.log('Connects');
 
 client.query('SELECT * FROM public.suplies ORDER BY id ASC', (err, res) => {
   console.log(err, res.rows)
-  client.end()
-})
-
-// client.query('SELECT NOW()', (err, res) => {
-//   console.log(err, res)
-//   client.end()
-// })
+  // client.end()
+});
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
