@@ -6,9 +6,9 @@ require("dotenv/config");
 const DB_PASSWORD = process.env.DB_PASSWORD
 
 export const client = new Client({
-  user: 'lraqlqpculjgps',
-  host: 'ec2-176-34-97-213.eu-west-1.compute.amazonaws.com',
-  database: 'd2ia90tbiq7o1h',
+  user: 'jxecsymlrqqcwd',
+  host: 'ec2-46-137-79-235.eu-west-1.compute.amazonaws.com',
+  database: 'd2jlee0a60a8qd',
   password: DB_PASSWORD,
   port: 5432,
   ssl: {
